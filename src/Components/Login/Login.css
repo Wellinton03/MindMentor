@@ -64,8 +64,13 @@
 }
 
 .recall-forget a,
-.signup-link p a {
+.signup-link p a{
     color: white;
+    text-decoration: none;
+}
+
+.signup-link p {
+    color: rgb(128, 128, 128);
     text-decoration: none;
 }
 

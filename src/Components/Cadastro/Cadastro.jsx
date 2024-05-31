@@ -1,6 +1,7 @@
 import "./cadastro.css"
+import PropTypes from 'prop-types'
 
-const Cadastro = () => {
+const Cadastro = ({dispatch}) => {
   return (
     <div className="container">
         <form>
@@ -22,12 +23,14 @@ const Cadastro = () => {
             <input type="password" placeholder="Confirme a senha" />
           </div>
           <div className="redirection-login">
-            <p>Já tem uma conta? <a href="#">Login</a></p>
+            <p>Já tem uma conta? <a href="#" onClick={() => {dispatch({type: 'LOGIN'})}}>Login</a></p>
           </div>
           <button>Cadastrar</button>
         </form>
     </div>
   )
 }
-
+Cadastro.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+};
 export default Cadastro

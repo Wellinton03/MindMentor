@@ -1,10 +1,12 @@
 import {FaUser, FaLock} from "react-icons/fa";
+import PropTypes from 'prop-types';
 import { useState } from "react";
 import "./Login.css";
-const Login = () => {
 
-  const [userName, setUserName] = useState("")
-  const [ Password, setPassword] = useState("")
+  const Login = ({dispatch}) => {
+
+  const [ userName, setUserName] = useState("")
+  const [ password, setPassword] = useState("")
 
 const handleSubmit = (event) => {
   event.preventDefault();
@@ -29,15 +31,18 @@ const handleSubmit = (event) => {
             <input type="checkbox" />
             Lembre de mim
           </label>
-          <a href="#"> Esqueceu a senha?</a>
+          <a href="#" onClick={() => dispatch({ type: 'NEWPASSWORD'})}> Esqueceu a senha?</a>
         </div>
         <button>Entrar</button>
         <div className="signup-link">
-          <p>Ainda não tem uma conta? <a href="#">Cadastre-se</a></p>
+          <p>Ainda não tem uma conta? <a href="#" onClick={() => dispatch({ type: 'CADASTRO'})}>Cadastre-se</a></p>
         </div>
         </form> 
     </div>
-  )
-}
+  );
+};
 
+Login.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+};
 export default Login
