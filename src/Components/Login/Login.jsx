@@ -1,7 +1,7 @@
 import {FaUser, FaLock} from "react-icons/fa";
 import PropTypes from 'prop-types';
 import { useState } from "react";
-import "./Login.css";
+import "./login.css";
 
   const Login = ({dispatch}) => {
 
@@ -31,7 +31,7 @@ const handleSubmit = (event) => {
             <input type="checkbox" />
             Lembre de mim
           </label>
-          <a href="#" onClick={() => dispatch({ type: 'NEWPASSWORD'})}> Esqueceu a senha?</a>
+          <a href="#" onClick={() => dispatch({ type: 'EMAILAUTHENTICATION'})}> Esqueceu a senha?</a>
         </div>
         <button>Entrar</button>
         <div className="signup-link">
