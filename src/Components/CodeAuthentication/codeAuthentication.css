@@ -45,17 +45,6 @@
     text-shadow: none;
 }
 
-.container-authentication .icon {
-    color: white;
-}
-
-.container-authentication .description {
-    text-align: center;
-    color: grey;
-    font-size: 16px;
-    font-style: italic;
-}
-
 .container-authentication .back {
     color: white;
     cursor: pointer;
