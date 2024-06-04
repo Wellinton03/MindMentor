@@ -25,14 +25,14 @@ function reducer(state, action) {
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
-   return (
+  return (
     <div className="App">
       {state.screen === 'login' && <Login dispatch={dispatch} />}
       {state.screen === 'cadastro' && <Cadastro dispatch={dispatch} />}
       {state.screen === 'newPassword' && <NewPassword dispatch={dispatch} />}
       {state.screen === 'emailAuthentication' && <EmailAuthentication dispatch={dispatch}/>}
     </div>
-   );
+  );
 }
 
 export default App
